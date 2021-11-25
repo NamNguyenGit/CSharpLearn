@@ -11,44 +11,30 @@ namespace ConsoleApp11
     {
         private List<Employee> ListEmployee = null;
         Employee emp = new Employee();
+
+        public EmployeeService(List<Employee> listEmployee)
+        {
+            ListEmployee = listEmployee;
+        }
+
         public double CalculateSalary()
         {
             return emp.Basesalary * emp.Ratesalary;
         }
 
-        
-
-        public void DisplayData(List<Employee> listemp)
+        public void DisplayData()
         {
-           if(listemp != null)
+            Console.WriteLine("List Employee");
+            foreach (Employee emp in ListEmployee)
             {
-                foreach(Employee emp in listemp)
-                {
-                    Console.WriteLine("\n ID Employee: " + emp.EmployeeId, "\nFirst name Employee : " + emp.FirstName, "Last name Employee: " + emp.LastName,
-                        "Address Employee: " + emp.Address, "Phone Employee: " + emp.Phone, "Basesalary Employee: " + emp.Basesalary, "Ratesalary Employee: " + emp.Ratesalary
-                        + "Salary: " + CalculateSalary());
-                }
+                Console.WriteLine(
+                    "Id: {0} \t firstName: {1} \t lastName: {2} \t address: {3} \t phone: {4} \t basesalary: {5} \t ratesalary: {6} \t salary: {7}",
+                    emp.EmployeeId, emp.FirstName, emp.LastName, emp.Address, emp.Phone, emp.Basesalary, emp.Ratesalary, CalculateSalary());
             }
         }
 
         public void InputData()
         {
-            Employee emp = new Employee();
-            Console.Write("Insert ID Employee ");
-            emp.EmployeeId = Console.ReadLine();
-            Console.Write("Insert First Name Employee ");
-            emp.FirstName = Console.ReadLine();
-            Console.Write("Insert Last Name Employee ");
-            emp.LastName = Console.ReadLine();
-            Console.Write("Insert Address Employee ");
-            emp.Address = Console.ReadLine();
-            Console.Write("Insert Phone Employee ");
-            emp.Phone = Console.ReadLine();
-            Console.Write("Insert Basesalary Employee ");
-            emp.Basesalary = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Insert Ratesalary Employee ");
-            emp.Ratesalary = Convert.ToDouble(Console.ReadLine());
-            ListEmployee.Add(emp);
         }
 
         public List<Employee> Search(string name)
@@ -60,7 +46,9 @@ namespace ConsoleApp11
                 {
                     if (emp.FirstName.ToUpper().Contains(name.ToUpper()))
                     {
-                        searchResult.Add(emp);
+                        Console.WriteLine(
+                    "Id: {0} \t firstName: {1} \t lastName: {2} \t address: {3} \t phone: {4} \t basesalary: {5} \t ratesalary: {6} \t salary: {7}",
+                    emp.EmployeeId, emp.FirstName, emp.LastName, emp.Address, emp.Phone, emp.Basesalary, emp.Ratesalary, CalculateSalary());
                     }
                 }
             }

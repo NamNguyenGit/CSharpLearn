@@ -10,7 +10,7 @@ namespace ConsoleApp11
     {
         void InputData();
         double CalculateSalary();
-        void DisplayData(List<Employee> listemp);
+        void DisplayData();
         List<Employee> Search(string name);
 
     }
