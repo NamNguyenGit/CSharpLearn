@@ -1,0 +1,6 @@
+C:\Users\acer\source\repos\ConsoleApp13\bin\Debug\ConsoleApp13.exe.config
+C:\Users\acer\source\repos\ConsoleApp13\bin\Debug\ConsoleApp13.exe
+C:\Users\acer\source\repos\ConsoleApp13\bin\Debug\ConsoleApp13.pdb
+C:\Users\acer\source\repos\ConsoleApp13\obj\Debug\ConsoleApp13.csproj.CoreCompileInputs.cache
+C:\Users\acer\source\repos\ConsoleApp13\obj\Debug\ConsoleApp13.exe
+C:\Users\acer\source\repos\ConsoleApp13\obj\Debug\ConsoleApp13.pdb
